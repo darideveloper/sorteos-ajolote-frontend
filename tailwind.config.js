@@ -11,7 +11,7 @@ export default {
         "pink-light": "#F288C2",
         "green": "#092326",
         "yellow": "#D9BD6A",
-        "yello-light": "#F2E6D0"
+        "yellow-light": "#F2E6D0"
       }
     },
   },
