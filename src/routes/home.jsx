@@ -1,6 +1,6 @@
 // Components
 import { Link } from "react-router-dom"
-import SectionParalax from "../components/section-paralax"
+import Paralax from "../components/paralax"
 import Title from "../components/title"
 import Faq from "../components/faq"
 
@@ -8,14 +8,18 @@ export default function Home() {
 
   return (
     <>
-      <SectionParalax
-        extraClasses="hero flex items-center justify-center relative"
-        imageUrl="./hero.png">
+      <section className="hero">
+        <Paralax
+          extraClasses="flex items-center justify-center relative h-52 sm:h-80 md:h-96 lg:h-screen"
+          imageUrl="./hero.png"
+          maxHeight="400"
+        >
 
-        <h1 className="absolute -top-3 sm:-top-4 md:-top-5 lg:-top-5 left-0 w-full text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">Sorteos Ajolote</h1>
-        <Link to={"buy"} className="rounded-xl bg-yellow text-2xl sm:text-3xl md:text-4xl font-bold text-green px-5 sm:px-6 md:px-8 lg:px-10 py-1 sm:py-2 md:py-2 lg:py-3 uppercase shadow-lg border-4 border-yellow duration-300 hover:bg-transparent hover:text-yellow">Comprar boletos</Link>
+          <h1 className="absolute -top-3 sm:-top-4 md:-top-5 lg:-top-5 left-0 w-full text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">Sorteos Ajolote</h1>
+          <Link to={"buy"} className="rounded-xl bg-yellow text-2xl sm:text-3xl md:text-4xl font-bold text-green px-5 sm:px-6 md:px-8 lg:px-10 py-1 sm:py-2 md:py-2 lg:py-3 uppercase shadow-lg border-4 border-yellow duration-300 hover:bg-transparent hover:text-yellow">Comprar boletos</Link>
 
-      </SectionParalax>
+        </Paralax>
+      </section>
 
       <section className="faqs" id="faqs">
         <Title
@@ -91,8 +95,28 @@ export default function Home() {
 
 
         </div>
+      </section>
 
+      <section className="about-us mt-20" id="about-us">
 
+        <Title
+          text="ACERCA DE NOSOTROS"
+        />
+        <Paralax
+          extraClasses="flex items-center justify-center relative flex-col h-96 lg:h-screen"
+          imageUrl="./hero.png"
+          maxHeight="400"
+        >
+
+          <div className="container text-2xl mx-auto px-5 text-center">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At odit mollitia dolor asperiores totam exercitationem officiis iure, ipsam magnam quos.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dolor omnis esse, voluptatibus eos magni optio cupiditate. Consequuntur, officia exercitationem numquam dignissimos.</p>
+          </div>
+        </Paralax>
+      </section>
+
+      <section className="" id="about-us">
 
       </section>
 
