@@ -7,7 +7,7 @@ export default function Root() {
         <nav>
           <ul>
             <li>
-              <a href="#faq">Preguntas frecuentes</a>
+              <a href="#faqs">Preguntas frecuentes</a>
             </li>
             <li>
               <a href="about-us">Acerca de nosotros</a>
