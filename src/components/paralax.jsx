@@ -11,7 +11,7 @@ export default function Paralax({ children, imageUrl, extraClasses = "", maxHeig
 }
 
 Paralax.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.element,
   imageUrl: PropTypes.string.isRequired,
   extraClasses: PropTypes.string,
   maxHeight: PropTypes.number.isRequired

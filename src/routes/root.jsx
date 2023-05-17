@@ -14,7 +14,15 @@ export default function Root() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
-
+    
+    // Get id from url
+    const id = window.location.hash
+    if (id) {
+      const section = document.getElementById(id)
+      setTimeout(() => {
+        contact.scrollIntoView({ behavior: 'smooth' })
+      }, 1000)
+    }
   }, [isMenuOpen])
 
   return (
@@ -29,19 +37,19 @@ export default function Root() {
             <ul className="flex items-center gap-0 pt-20 md:pt-0 text-lg text-center flex-col md:flex-row">
               <li>
                 <HeaderLink
-                  to="#faqs"
+                  to="/#faqs"
                   text="Preguntas frecuentes"
                 />
               </li>
               <li>
                 <HeaderLink
-                  to="#about-us"
+                  to="/#about-us"
                   text="Acerca de nosotros"
                 />
               </li>
               <li>
                 <HeaderLink
-                  to="#contact"
+                  to="/#contact"
                   text="Contacto"
                 />
               </li>
