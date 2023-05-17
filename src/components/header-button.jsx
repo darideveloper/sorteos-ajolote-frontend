@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 export default function HeaderButton({ active, setActive }) {
   return (
     <button
-      className="menu top-5 right-5 z-20 md:hidden"
+      className="menu top-6 right-5 z-20 md:hidden"
       style={{position: active ? 'fixed' : 'absolute'}}
       onClick={() => setActive(!active)}
     >
