@@ -8,7 +8,7 @@ export default function Lottery({ title, description, date, image, price, number
   const [selectedNumbers, setSelectedNumbers] = useState([])
 
   return (
-    <section className="lottery mt-10 text-center relative" key={title} >
+    <section className="lottery mb-10 text-center relative" key={title} >
       <Title
         text={title}
       />

@@ -7,6 +7,7 @@ import { getLoterry } from '../api/lottery'
 // Components
 import Lottery from '../components/lottery'
 import Title from '../components/title'
+import Paralax from '../components/paralax'
 
 export default function Buy() {
 
@@ -28,6 +29,11 @@ export default function Buy() {
       <Title
         text="Comprar Boletos"
         isMainTitle={true}
+      />
+      <Paralax
+          extraClasses="flex items-center justify-center relative h-52 sm:h-80 md:h-96 lg:h-screen"
+          imageUrl="./hero.jpg"
+          maxHeight={400}
       />
       {
         dataLoaded
