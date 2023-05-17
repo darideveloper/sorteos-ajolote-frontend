@@ -32,6 +32,6 @@ body {
     margin-top: -5px
 }
 
-::-webkit-scrollbar-thumb  &:hover {
-      background: #d9bd6a70
+::-webkit-scrollbar-thumb:hover {
+      background: #d9bd6a99
   }
