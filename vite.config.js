@@ -6,5 +6,6 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 8000
-  }
+  },
+  base: '/sorteos-ajolote-frontend/'
 })
