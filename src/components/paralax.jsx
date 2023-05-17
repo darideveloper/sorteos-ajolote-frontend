@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 export default function Paralax({ children, imageUrl, extraClasses = "", maxHeight }) {
 
   return (
@@ -5,4 +7,11 @@ export default function Paralax({ children, imageUrl, extraClasses = "", maxHeig
       {children}
     </div>
   )
+}
+
+Paralax.propTypes = {
+  children: PropTypes.element.isRequired,
+  imageUrl: PropTypes.string.isRequired,
+  extraClasses: PropTypes.string,
+  maxHeight: PropTypes.number.isRequired
 }
