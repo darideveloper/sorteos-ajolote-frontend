@@ -1,6 +1,12 @@
+// Hooks
 import { useState, useEffect } from 'react'
-import { getLoterry } from "../api/lottery"
+
+// Api
+import { getLoterry } from '../api/lottery'
+
+// Components
 import Lottery from '../components/lottery'
+import Title from '../components/title'
 
 export default function Buy() {
 
@@ -19,7 +25,10 @@ export default function Buy() {
 
   return (
     <>
-      <h1 className='text-4xl text-center mt-10'>Comprar Boletos</h1>
+      <Title
+        text="Comprar Boletos"
+        isMainTitle={true}
+      />
       {
         dataLoaded
           ?
