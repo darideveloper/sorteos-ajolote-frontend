@@ -138,9 +138,9 @@ export default function Home() {
         >
 
           <div className="container text-2xl mx-auto px-5 text-center">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At odit mollitia dolor asperiores totam exercitationem officiis iure, ipsam magnam quos.</p>
+            <p>Somos la manera más segura y divertida de participar en sorteos/rifas en México, todos nuestros sorteos se realizan en base a la Lotería Nacional para la Asistencia Pública mexicana.</p>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dolor omnis esse, voluptatibus eos magni optio cupiditate. Consequuntur, officia exercitationem numquam dignissimos.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis et iusto officiis! Adipisci fuga cupiditate praesentium quaerat optio eligendi iure id magni deleniti, commodi ipsum aspernatur nihil ad delectus recusandae!</p>
           </div>
         </Paralax>
       </section>
