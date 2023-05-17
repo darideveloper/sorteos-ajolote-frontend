@@ -11,6 +11,7 @@ import Root from "./routes/root"
 import Error404 from "./routes/error-404"
 import Home from "./routes/home"
 import Buy from "./routes/buy"
+import Privacy from "./routes/privacy"
 
 // css
 import "./index.css"
@@ -28,6 +29,10 @@ const router = createBrowserRouter ([
       {
         path: "buy",
         element: <Buy/>,
+      },
+      {
+        path: "privacy",
+        element: <Privacy/>,
       }
     ]
   }
