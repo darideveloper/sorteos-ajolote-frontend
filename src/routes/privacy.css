@@ -2,6 +2,6 @@
     margin-bottom: 10px;
 }
 
-li {
+.content > li {
     list-style: circle;
 }

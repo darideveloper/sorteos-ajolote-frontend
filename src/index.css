@@ -5,3 +5,8 @@
 body {
     font-family: 'Dosis', sans-serif;
 }
+
+* {
+    outline: none;
+}
+
