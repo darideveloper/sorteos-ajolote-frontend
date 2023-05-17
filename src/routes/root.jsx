@@ -1,5 +1,5 @@
 // Routing
-import { Outlet } from "react-router-dom"
+import { Outlet, useNavigation } from "react-router-dom"
 
 // Hooks
 import { useState, useEffect } from "react"
@@ -13,17 +13,23 @@ export default function Root() {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  // Move to sections
   useEffect(() => {
-    
+
     // Get id from url
     const id = window.location.hash
     if (id) {
       const section = document.getElementById(id)
       setTimeout(() => {
-        contact.scrollIntoView({ behavior: 'smooth' })
+        contact.scrollIntoView()
       }, 1000)
     }
-  }, [isMenuOpen])
+  }, [])
+
+  // Update when maneu change
+  useEffect(() => { }, [isMenuOpen])
+
+  const navigation = useNavigation()
 
   return (
     <>
@@ -72,7 +78,13 @@ export default function Root() {
       </header>
 
       <main>
-        <Outlet />
+        {
+          navigation.state === "loading"
+            ?
+            <Loading />
+            :
+            <Outlet />
+        }
       </main>
       <footer>
         <small className="text-md text-center block">

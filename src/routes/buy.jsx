@@ -8,6 +8,7 @@ import { getLoterry } from '../api/lottery'
 import Lottery from '../components/lottery'
 import Title from '../components/title'
 import Paralax from '../components/paralax'
+import Loading from '../components/loading'
 
 export default function Buy() {
 
@@ -63,9 +64,7 @@ export default function Buy() {
             </section>
           :
           // Render loading page
-          <div className="spinner flex items-center justify-center h-screen">
-            <img src="./spinner.gif" alt="spinner gif" />
-          </div>
+          <Loading />
       }
     </>
   )
