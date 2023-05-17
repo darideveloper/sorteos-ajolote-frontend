@@ -1,14 +1,16 @@
-import { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
+
+import { useState } from 'react'
 import Title from '../components/title'
 import LotteryNum from '../components/lottery-num'
 import BuyButton from '../components/buy-button'
 
-export default function Lottery({ title, description, date, image, price, numbers }) {
+export default function Lottery({ id, title, description, date, image, price, numbers }) {
 
   const [selectedNumbers, setSelectedNumbers] = useState([])
 
   return (
-    <section className="lottery mb-10 text-center relative" key={title} >
+    <section className="lottery mb-10 text-center relative" id={id} >
       <Title
         text={title}
       />
@@ -43,4 +45,14 @@ export default function Lottery({ title, description, date, image, price, number
       />
     </section >
   )
+}
+
+Lottery.propTypes = {
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  numbers: PropTypes.array.isRequired
 }

@@ -42,9 +42,25 @@ export default function Buy() {
                 extraClasses="flex items-center justify-center relative h-52 sm:h-80 md:h-96 lg:h-screen"
                 imageUrl="./hero.jpg"
                 maxHeight={400}
-              />
+              >
+                {/* Render lottery menu */}
+                <ul>
+                  {data.map((data) => (
+                    <li key={data.title} className=''>
+                      <a 
+                        href={`#${data.title.toLowerCase().replace(" ", "-")}`}
+                        className='text-2xl font-bold text-yellow-light hover:text-yellow transition-all duration-300'
+                      >
+                        {data.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+
+              </Paralax>
               {data.map((data) => (
                 <Lottery
+                  id = {data.title.toLowerCase().replace(" ", "-")}
                   key={data.title}
                   title={data.title}
                   description={data.description}
