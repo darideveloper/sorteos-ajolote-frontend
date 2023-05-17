@@ -10,3 +10,10 @@ body {
     outline: none;
 }
 
+.privacy > * {
+    margin-bottom: 10px;
+}
+
+.privacy > li {
+    list-style: circle;
+}

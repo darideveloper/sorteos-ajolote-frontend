@@ -1,8 +1,6 @@
-import "./privacy.css"
-
 export default function Privacy() {
   return (
-    <div className="content max-w-7xl mx-auto">
+    <div className="content privacy max-w-7xl mx-auto">
       <h1 className="text-4xl">Aviso de Privacidad</h1>
       <p>En Sorteos Ajolote, nos comprometemos a proteger la privacidad de nuestros usuarios y clientes. Este aviso de privacidad describe cómo recopilamos, utilizamos y protegemos la información personal que nos proporcionas a través de nuestra página web.</p>
 
