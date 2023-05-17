@@ -7,5 +7,6 @@ export default defineConfig({
   server: {
     port: 8000
   },
-  base: '/sorteos-ajolote-frontend/'
+  // base: '/sorteos-ajolote-frontend/'
+  base: '/'
 })
