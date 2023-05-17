@@ -1,41 +1,57 @@
 import { useState, useEffect } from 'react'
 import { getLoterry } from "../api/lottery"
+import Lottery from '../components/lottery'
 
 export default function Buy() {
 
   const [data, setData] = useState([])
+  const [dataLoaded, setDataLoaded] = useState(false)
 
   // Load data when loads
   useEffect(() => {
 
     getLoterry().then(data => {
       setData(data)
+      setDataLoaded(true)
     })
 
   }, [])
 
-  // Render when data changes
-  useEffect(() => {}, [data])
-
   return (
-    (
-      data.length > 0
-      ?
-        <>
-          {/* Render lottery */}
-          <h1 className='text-4xl text-center mt-10'>Comprar Boletos</h1>
-          {data.map (({title, description, date, image, price, numbers}) => (
-            <section className="lottery" key={title}>
-              <p>{data.title}</p>
+    <>
+      <h1 className='text-4xl text-center mt-10'>Comprar Boletos</h1>
+      {
+        dataLoaded
+          ?
+          data.length > 0
+            ?
+            // Render lottery
+            <>
+              {data.map((data) => (
+                <Lottery
+                  key={data.title}
+                  title={data.title}
+                  description={data.description}
+                  date={data.date}
+                  image={data.image}
+                  price={data.price}
+                  numbers={data.numbers}
+                />
+              ))}
+            </>
+            :
+            // Render error page
+            <section className="no-data container text-center h-screen flex items-center justify-center flex-col mx-auto">
+              <img src="./not-found.svg" alt="ilustración sin sorteos encontrados" className='opacity-50 max-w-md' />
+              <h1 className='text-3xl my-5'>No hay sorteos disponibles en este momento</h1>
+              <p className='text-xl'>Intenta mas tarde</p>
             </section>
-          ))}
-        </>
-        :
-        <section className="no-data container text-center h-screen flex items-center justify-center flex-col mx-auto">
-          <img src="./not-found.svg" alt="ilustración sin sorteos encontrados" className='opacity-50 max-w-md'/>
-          <h1 className='text-3xl my-5'>No hay sorteos disponibles en este momento</h1>
-          <p className='text-xl'>Intenta mas tarde</p>
-        </section>
-    )
+          :
+          // Render loading page
+          <div className="spinner flex items-center justify-center h-screen">
+            <img src="./spinner.gif" alt="spinner gif" />
+          </div>
+      }
+    </>
   )
 }
