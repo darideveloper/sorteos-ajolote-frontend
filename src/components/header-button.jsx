@@ -3,16 +3,16 @@ import PropTypes from 'prop-types'
 export default function HeaderButton({ active, setActive }) {
   return (
     <button
-      className="menu top-5 right-5 z-20 sm:hidden"
+      className="menu top-5 right-5 z-20 md:hidden"
       style={{position: active ? 'fixed' : 'absolute'}}
       onClick={() => setActive(!active)}
     >
       <svg
         viewBox="0 0 24 24" 
         xmlns="http://www.w3.org/2000/svg" 
-        className="w-14 mr-2 fill-pink duration-300"
+        className="w-12 mr-1 -mt-2 fill-pink duration-300"
         style={{ 
-          transform: active && 'translateX(-60px)',
+          transform: active && 'translateX(-90px)',
         }}
       >
         {

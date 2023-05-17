@@ -21,12 +21,12 @@ export default function Root() {
     <>
       <header>
         <div className="container mx-auto flex items-center justify-between relative">
-          <img src="./logo.png" alt="logo de sorteos ajolote" className="logo w-28 -mb-4 rounded-full" />
+          <img src="./logo.png" alt="logo de sorteos ajolote" className="logo w-24 -mb-5 rounded-full" />
           <nav
-            className="fixed sm:static top-0 w-72 sm:w-auto h-screen sm:h-auto bg-green z-10 sm:z-0 shadow-2xl sm:shadow-none duration-300"
-            style={{ right: isMenuOpen ? '0' : "-250px" }}
+            className="fixed md:static top-0 w-72 md:w-auto h-screen md:h-auto bg-green z-10 md:z-0 shadow-2xl md:shadow-none duration-300"
+            style={{ right: isMenuOpen ? '0' : "-400px" }}
           >
-            <ul className="flex items-center gap-5 sm:gap-0 p-5 sm:p-0 pt-28 sm:pt-0 text-2xl text-center flex-col sm:flex-row">
+            <ul className="flex items-center gap-0 pt-20 md:pt-0 text-lg text-center flex-col md:flex-row">
               <li>
                 <HeaderLink
                   to="#faqs"

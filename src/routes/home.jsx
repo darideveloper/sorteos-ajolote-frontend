@@ -10,14 +10,14 @@ export default function Home() {
   return (
     <>
       <section className="hero">
-        <h1 className="w-full text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold bg-pink py-2">Sorteos Ajolote</h1>
+        <h1 className="w-full text-center text-xl sm:text-2xl md:text-3xl font-bold bg-pink py-2">Sorteos Ajolote</h1>
         <Paralax
           extraClasses="flex items-center justify-center relative h-52 sm:h-80 md:h-96 lg:h-screen"
           imageUrl="./hero.jpg"
           maxHeight={400}
         >
           <>
-            <Link to={"buy"} className="rounded-xl bg-yellow text-2xl sm:text-3xl md:text-4xl font-bold text-green px-5 sm:px-6 md:px-8 lg:px-10 py-1 sm:py-2 md:py-2 lg:py-3 uppercase shadow-lg border-4 border-yellow duration-300 hover:bg-transparent hover:text-yellow">Comprar boletos</Link>
+            <Link to={"buy"} className="rounded-xl bg-yellow text-xl sm:text-2xl md:text-3xl font-bold text-green px-5 sm:px-6 md:px-8 lg:px-10 py-1 sm:py-2 md:py-2 lg:py-3 uppercase shadow-lg border-4 border-yellow duration-300 hover:bg-transparent hover:text-yellow">Comprar boletos</Link>
           </>
         </Paralax>
       </section>
@@ -134,10 +134,10 @@ export default function Home() {
         <Paralax
           extraClasses="flex items-center justify-center relative flex-col h-96 lg:h-screen"
           imageUrl="./hero.jpg"
-          maxHeight={400}
+          maxHeight={500}
         >
 
-          <div className="container text-2xl mx-auto px-5 text-center">
+          <div className="container text-xl mx-auto px-5 text-center">
             <p>Somos la manera más segura y divertida de participar en sorteos/rifas en México, todos nuestros sorteos se realizan en base a la Lotería Nacional para la Asistencia Pública mexicana.</p>
 
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis et iusto officiis! Adipisci fuga cupiditate praesentium quaerat optio eligendi iure id magni deleniti, commodi ipsum aspernatur nihil ad delectus recusandae!</p>
@@ -150,7 +150,7 @@ export default function Home() {
           text="Contacto"
         />
 
-        <div className="contacts container mx-auto grid grid-cols-4 gap-2 my-10 max-w-lg">
+        <div className="contacts container mx-auto grid grid-cols-4 gap-2 my-10 max-w-sm">
 
           <ContactIcon
             link="https://www.facebook.com/profile.php?id=100092314046742"

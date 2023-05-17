@@ -25,7 +25,7 @@ export async function getLoterry () {
     ]
   },]
   
-  return []
+  // return []
 
   return data
 }

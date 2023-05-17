@@ -7,7 +7,7 @@ export default function Faq({ question, icon, children }) {
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="w-10 mx-auto my-5 fill-pink">
           {icon}
         </svg>
-        <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-center my-2 text-yellow">{question}</h3>
+        <h3 className="text-lg sm:text-lg md:text-xl lg:text-2xl text-center my-2 text-yellow">{question}</h3>
       </header>
       <div className="text">
         {children}

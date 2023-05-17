@@ -31,10 +31,10 @@ export default function Buy() {
           ))}
         </>
         :
-        <section className="no-data text-center container h-screen flex items-center justify-center flex-col">
-          <img src="./not-found.svg" alt="ilustración sin sorteos encontrados" className='opacity-50'/>
-          <h1 className='text-4xl my-5'>No hay sorteos disponibles en este momento</h1>
-          <p className='text-2xl'>Intenta mas tarde</p>
+        <section className="no-data container text-center h-screen flex items-center justify-center flex-col mx-auto">
+          <img src="./not-found.svg" alt="ilustración sin sorteos encontrados" className='opacity-50 max-w-md'/>
+          <h1 className='text-3xl my-5'>No hay sorteos disponibles en este momento</h1>
+          <p className='text-xl'>Intenta mas tarde</p>
         </section>
     )
   )
