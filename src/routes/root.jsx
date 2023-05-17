@@ -67,7 +67,9 @@ export default function Root() {
         <Outlet />
       </main>
       <footer>
-        footer
+        <small className="text-md text-center block">
+          &copy 2023 Sorteos Ajolote, powered by <a href="https://www.darideveloper.com" target="_blank">Dari Developer</a>
+        </small>
       </footer>
     </>
   )
