@@ -48,7 +48,7 @@ export default function Root() {
               <li>
                 <HeaderLink
                   to="buy"
-                  text="Buy"
+                  text="Comprar"
                   isLink={true}
                 />
               </li>
