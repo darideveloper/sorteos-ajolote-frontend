@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 
 export default function Faq({ question, icon, children }) {
   return (
-    <article className="faq block">
+    <article className="faq block text-center">
       <header>
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="w-10 mx-auto my-5 fill-pink">
           {icon}
