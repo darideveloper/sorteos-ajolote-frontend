@@ -26,9 +26,6 @@ export default function Root() {
     }
   }, [])
 
-  // Update when maneu change
-  useEffect(() => { }, [isMenuOpen])
-
   const navigation = useNavigation()
 
   return (

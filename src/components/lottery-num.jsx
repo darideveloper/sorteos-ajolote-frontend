@@ -1,12 +1,9 @@
 import PropTypes from 'prop-types'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 export default function LotteryNum({ number, selectedNumbers, setSelectedNumbers }) {
 
-  const [isActive, setIsActive] = useState(false)
-
-  useEffect(() => {}, [isActive])
-  
+  const [isActive, setIsActive] = useState(false)  
 
   return (
     <button
