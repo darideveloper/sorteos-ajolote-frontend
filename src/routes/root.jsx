@@ -19,9 +19,10 @@ export default function Root() {
     // Get id from url
     const id = window.location.hash
     if (id) {
-      const section = document.getElementById(id)
       setTimeout(() => {
-        contact.scrollIntoView()
+        console.log (id)
+        const section = document.querySelector(id)
+        section.scrollIntoView()
       }, 1000)
     }
   }, [])
