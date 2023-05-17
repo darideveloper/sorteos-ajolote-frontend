@@ -3,7 +3,7 @@ import { getLoterry } from "../api/lottery"
 
 export default function Buy() {
 
-  const [data, setData] = useState({})
+  const [data, setData] = useState([])
 
   // Load data when loads
   useEffect(() => {
@@ -15,19 +15,27 @@ export default function Buy() {
   }, [])
 
   // Render when data changes
-  useEffect(() => {
-    console.log(data)
-  }, [data])
+  useEffect(() => {}, [data])
 
   return (
     (
-      data
+      data.length > 0
       ?
         <>
+          {/* Render lottery */}
           <h1 className='text-4xl text-center mt-10'>Comprar Boletos</h1>
+          {data.map (({title, description, date, image, price, numbers}) => (
+            <section className="lottery" key={title}>
+              <p>{data.title}</p>
+            </section>
+          ))}
         </>
         :
-        <p>no data</p>
+        <section className="no-data text-center container h-screen flex items-center justify-center flex-col">
+          <img src="./not-found.svg" alt="ilustración sin sorteos encontrados" className='opacity-50'/>
+          <h1 className='text-4xl my-5'>No hay sorteos disponibles en este momento</h1>
+          <p className='text-2xl'>Intenta mas tarde</p>
+        </section>
     )
   )
 }
