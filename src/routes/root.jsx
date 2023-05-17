@@ -20,8 +20,8 @@ export default function Root() {
   return (
     <>
       <header>
-        <div className="container mx-auto flex items-center justify-between relative">
-          <img src="./logo.png" alt="logo de sorteos ajolote" className="logo w-24 -mb-5 rounded-full" />
+        <div className="container mx-auto flex items-center justify-end relative h-20">
+          <img src="./logo.png" alt="logo de sorteos ajolote" className="absolute top-0 left-0 z-10 logo w-24 rounded-full" />
           <nav
             className="fixed md:static top-0 w-72 md:w-auto h-screen md:h-auto bg-green z-10 md:z-0 shadow-2xl md:shadow-none duration-300"
             style={{ right: isMenuOpen ? '0' : "-400px" }}
