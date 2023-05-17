@@ -4,6 +4,7 @@ export default function Root() {
   return (
     <>
       <header>
+        <img src="./logo.png" alt="logo de sorteos ajolote" className="logo" />
         <nav>
           <ul>
             <li>

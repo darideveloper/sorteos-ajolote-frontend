@@ -9,7 +9,7 @@ export default {
       colors: {
         "pink": "#e982b599",
         "pink-light": "#f9c9de",
-        "green": "#092326",
+        "green": "#0a272d",
         "yellow": "#D9BD6A",
         "yellow-light": "#F2E6D0"
       }

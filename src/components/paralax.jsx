@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 export default function Paralax({ children, imageUrl, extraClasses = "", maxHeight }) {
 
   return (
-    <div className={`w-full bg-fixed bg-center bg-cover ${extraClasses}`} style={{ maxHeight: `${maxHeight}px`, backgroundImage: `url('${imageUrl}')` }}>
+    <div className={`w-full relative ${extraClasses}`} style={{ maxHeight: `${maxHeight}px` }}>
+      <div className="absolute bg-fixed bg-center bg-cover top-0 left-0 w-full h-full opacity-40 -z-10" style={{ backgroundImage: `url('${imageUrl}')` }}/>
       {children}
     </div>
   )

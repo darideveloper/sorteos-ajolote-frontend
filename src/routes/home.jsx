@@ -12,7 +12,7 @@ export default function Home() {
       <section className="hero">
         <Paralax
           extraClasses="flex items-center justify-center relative h-52 sm:h-80 md:h-96 lg:h-screen"
-          imageUrl="./hero.png"
+          imageUrl="./hero.jpg"
           maxHeight={400}
         >
           <>
@@ -133,7 +133,7 @@ export default function Home() {
         />
         <Paralax
           extraClasses="flex items-center justify-center relative flex-col h-96 lg:h-screen"
-          imageUrl="./hero.png"
+          imageUrl="./hero.jpg"
           maxHeight={400}
         >
 
