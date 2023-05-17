@@ -27,15 +27,6 @@ export default function Buy() {
 
   return (
     <>
-      <Title
-        text="Comprar Boletos"
-        isMainTitle={true}
-      />
-      <Paralax
-          extraClasses="flex items-center justify-center relative h-52 sm:h-80 md:h-96 lg:h-screen"
-          imageUrl="./hero.jpg"
-          maxHeight={400}
-      />
       {
         dataLoaded
           ?
@@ -43,6 +34,15 @@ export default function Buy() {
             ?
             // Render lottery
             <>
+              <Title
+                text="Comprar Boletos"
+                isMainTitle={true}
+              />
+              <Paralax
+                extraClasses="flex items-center justify-center relative h-52 sm:h-80 md:h-96 lg:h-screen"
+                imageUrl="./hero.jpg"
+                maxHeight={400}
+              />
               {data.map((data) => (
                 <Lottery
                   key={data.title}
