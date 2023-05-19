@@ -1,7 +1,5 @@
 const endpoint = import.meta.env.VITE_API
 
-console.log (endpoint)
-
 export async function getLoterries() {
 
   const response = await fetch(`${endpoint}/get-lotteries/`, {
