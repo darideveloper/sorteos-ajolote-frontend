@@ -39,3 +39,37 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #d9bd6a99;
 }
+
+@keyframes ldio-2yu3trw6viq {
+  0% { transform: translate(-50%,-50%) rotate(0deg); }
+  100% { transform: translate(-50%,-50%) rotate(360deg); }
+}
+.ldio-2yu3trw6viq div {
+  position: absolute;
+  width: 62px;
+  height: 62px;
+  border: 10px solid #d9bd6a;
+  border-top-color: transparent;
+  border-radius: 50%;
+}
+.ldio-2yu3trw6viq div {
+  animation: ldio-2yu3trw6viq 1s linear infinite;
+  top: 100px;
+  left: 100px
+}
+.loadingio-spinner-rolling-ljymn33voue {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  overflow: hidden;
+  background: none;
+}
+.ldio-2yu3trw6viq {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0; /* see note above */
+}
+.ldio-2yu3trw6viq div { box-sizing: content-box; }

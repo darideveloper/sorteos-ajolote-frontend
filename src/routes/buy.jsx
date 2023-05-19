@@ -28,7 +28,7 @@ export default function Buy() {
   return (
     <>
       {
-        dataLoaded
+        dataLoaded 
           ?
           data.length > 0
             ?
@@ -82,7 +82,9 @@ export default function Buy() {
             </section>
           :
           // Render loading page
-          <Loading />
+          <div className="loading-wrapper h-screen">
+            <Loading />
+          </div>
       }
     </>
   )

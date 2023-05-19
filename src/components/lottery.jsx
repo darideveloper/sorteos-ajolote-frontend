@@ -68,6 +68,8 @@ export default function Lottery({ id, title, description, date, image, price, nu
       <BuyForm 
         isFormOpen={isFormOpen}
         setIsFormOpen={setIsFormOpen}
+        selectedNumbers={selectedNumbers}
+        lotteryTitle={title}
       />
     </section >
   )
