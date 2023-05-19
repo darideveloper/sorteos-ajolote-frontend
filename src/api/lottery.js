@@ -1,4 +1,6 @@
-const endpoint = "http://localhost:8000/lottery"
+const endpoint = import.meta.env.VITE_API
+
+console.log (endpoint)
 
 export async function getLoterries() {
 
