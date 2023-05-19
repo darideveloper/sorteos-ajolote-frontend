@@ -15,7 +15,7 @@ export default function BuyForm({ isFormOpen, setIsFormOpen, selectedNumbers, lo
 
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
-  const [error, setError] = useState("")
+  const [message, setMessage] = useState({ text: selectedNumbers.join(" - "), type: "message" })
   const [emailIsInvalid, setEmailIsInvalid] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
@@ -27,49 +27,57 @@ export default function BuyForm({ isFormOpen, setIsFormOpen, selectedNumbers, lo
     setIsLoading(true)
 
     // Submit data to api
-    buyTickets (name, email, selectedNumbers, lotteryTitle).then (res => {
+    buyTickets(name, email, selectedNumbers, lotteryTitle).then(res => {
 
       const messages = {
         "invalid email": "Correo inválido",
         "lottery is closed": "Este sorteo ya está cerrado. Intenta con otro mas tarde.",
         "numbers not available": "Alguno de los números que elegiste ya no está disponible. Actualiza la página e intenta con otros. Numeros no disponibles: ",
       }
-      
+
       // Hide loading spinner
-      setIsLoading (false)
-      console.log (res)
-      
+      setIsLoading(false)
+
       if (res.status == "success") {
-        console.log ("success")
+        // TODO: Render success
+
+        cancel ()
       } else {
         // Render error
-        if (Object.keys(messages).includes (res.message)) {
-          setError (messages[res.message])
+        if (Object.keys(messages).includes(res.message)) {
+          setMessage({
+            text: messages[res.message],
+            type: "error"
+          })
 
           if (res.message == "invalid email") {
-            setEmailIsInvalid (true)
+            setEmailIsInvalid(true)
           } else {
-            setEmailIsInvalid (false)
+            setEmailIsInvalid(false)
           }
 
           if (res.message == "numbers not available") {
-            setNotAvailableNumbers (res.data.numbers)
+            setNotAvailableNumbers(res.data.numbers)
           } else {
-            setNotAvailableNumbers ([])
+            setNotAvailableNumbers([])
           }
 
         } else {
-          setError ("Error inesperado. Intenta de nuevo mas tarde.")
+          setMessage({
+            text: "Error inesperado. Intenta de nuevo mas tarde.",
+            type: "error"
+          })
         }
       }
     })
   }
 
-  function cancel () {
-    setIsFormOpen (false)
-    setIsSuccess (false)
-    setError ("")
-    setNotAvailableNumbers ([])
+  function cancel() {
+    setIsFormOpen(false)
+    setMessage ({text: selectedNumbers.join(" - "), type: "message"})
+    setEmailIsInvalid(false)
+    setIsSuccess(false)
+    setNotAvailableNumbers([])
   }
 
   return (
@@ -89,16 +97,20 @@ export default function BuyForm({ isFormOpen, setIsFormOpen, selectedNumbers, lo
             :
             <>
               <h2 className="text-2xl mb-2">Aparta tus boletos</h2>
-              <p className="message text-red-500 w-5/6">{error}</p>
-              <p className="numbers text-md text-red-500 w-5/6 flex flex-wrap mt-5 justify-center">
-                {
-                  notAvailableNumbers.map ((number, index) => {
-                    return (
-                      <span key={index} className="px-1">{number}</span>
-                    )
-                  })
-                }
-              </p>
+              <p className={`message ${message.type == 'error' ? 'text-red-500' : 'text-green'} w-5/6`}>{message.text}</p>
+              {
+                notAvailableNumbers.length > 0
+                &&
+                <p className="numbers text-md text-red-500 w-5/6 flex flex-wrap mt-5 justify-center">
+                  {
+                    notAvailableNumbers.map((number, index) => {
+                      return (
+                        <span key={index} className="px-1">{number}</span>
+                      )
+                    })
+                  }
+                </p>
+              }
 
               <Input
                 label="Nombre"
@@ -146,4 +158,5 @@ BuyForm.propTypes = {
   isFormOpen: PropTypes.bool.isRequired,
   setIsFormOpen: PropTypes.func.isRequired,
   selectedNumbers: PropTypes.array.isRequired,
+  lotteryTitle: PropTypes.string.isRequired,
 }

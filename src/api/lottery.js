@@ -10,6 +10,7 @@ export async function getLoterries() {
 
   return data
 }
+
 export async function buyTickets(user_name, user_email, tickets, lottery) {
 
   const response = await fetch(`${endpoint}/save-tickets/`, {
