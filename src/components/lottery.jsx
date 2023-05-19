@@ -1,13 +1,17 @@
 import PropTypes from 'prop-types'
 
+// Hoocks
 import { useState } from 'react'
+
+// Components
 import Title from '../components/title'
 import LotteryNum from '../components/lottery-num'
-import BuyButton from '../components/buy-button'
+import Button from './button'
 
 export default function Lottery({ id, title, description, date, image, price, numbers }) {
 
   const [selectedNumbers, setSelectedNumbers] = useState([])
+  const [isFormOpen, setIsFormOpen] = useState(false)
 
   return (
     <section className="lottery mb-10 text-center relative" id={id} >
@@ -40,9 +44,23 @@ export default function Lottery({ id, title, description, date, image, price, nu
         ))}
       </div>
 
-      <BuyButton
-        selectedNumbersLottery={selectedNumbers}
-      />
+      <Button
+        disabled={selectedNumbers.length == 0}
+        onClick={() => setIsFormOpen(true)}
+        customClasses="bg-yellow text-green px-5 sm:px-6 md:px-8 lg:px-10 border-yellow mt-5"
+      >
+        {
+          (selectedNumbers.length == 0)
+            ?
+            "Selecciona un numero"
+            :
+            (selectedNumbers.length == 1)
+              ?
+              "Comprar 1 boleto"
+              :
+              `Comprar ${selectedNumbers.length} boletos`
+        }
+      </Button>
     </section >
   )
 }
