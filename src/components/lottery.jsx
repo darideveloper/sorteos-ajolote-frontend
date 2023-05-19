@@ -8,11 +8,15 @@ import Title from '../components/title'
 import LotteryNum from '../components/lottery-num'
 import Button from './button'
 import BuyForm from './buy-form'
+import Modal from './modal'
+import Success from './success'
 
 export default function Lottery({ id, title, description, date, image, price, numbers }) {
 
   const [selectedNumbers, setSelectedNumbers] = useState([])
   const [isFormOpen, setIsFormOpen] = useState(false)
+  const [isSuccess, setIsSuccess] = useState(false)
+  const [name, setName] = useState("")
 
   return (
     <section className="lottery mb-10 text-center relative" id={id} >
@@ -65,12 +69,33 @@ export default function Lottery({ id, title, description, date, image, price, nu
         }
       </Button>
 
-      <BuyForm 
-        isFormOpen={isFormOpen}
-        setIsFormOpen={setIsFormOpen}
-        selectedNumbers={selectedNumbers}
-        lotteryTitle={title}
-      />
+      {/* Render form or sucess page */}
+      {
+        isSuccess
+        ?
+        <Modal
+          isVisible={isSuccess}
+        >
+          <Success 
+            setIsSuccess={setIsSuccess}
+            name={name}
+          />
+        </Modal>
+        :
+        <Modal
+          isVisible={isFormOpen}
+        >
+          <BuyForm
+            isFormOpen={isFormOpen}
+            setIsFormOpen={setIsFormOpen}
+            selectedNumbers={selectedNumbers}
+            lotteryTitle={title}
+            setIsSuccess={setIsSuccess}
+            name={name}
+            setName={setName}
+          />
+        </Modal>
+      }
     </section >
   )
 }
