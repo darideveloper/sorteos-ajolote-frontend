@@ -9,7 +9,6 @@ import Lottery from '../components/lottery'
 import Title from '../components/title'
 import Paralax from '../components/paralax'
 import Loading from '../components/loading'
-import BuyForm from '../components/buy-form'
 
 export default function Buy() {
 
@@ -72,7 +71,7 @@ export default function Buy() {
                 />
               ))}
 
-              <BuyForm />
+              
             </>
             :
             // Render error page

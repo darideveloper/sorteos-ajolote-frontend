@@ -7,6 +7,7 @@ import { useState } from 'react'
 import Title from '../components/title'
 import LotteryNum from '../components/lottery-num'
 import Button from './button'
+import BuyForm from './buy-form'
 
 export default function Lottery({ id, title, description, date, image, price, numbers }) {
 
@@ -46,7 +47,9 @@ export default function Lottery({ id, title, description, date, image, price, nu
 
       <Button
         disabled={selectedNumbers.length == 0}
-        onClick={() => setIsFormOpen(true)}
+        onClick={() => {
+          setIsFormOpen(true)
+        }}
         customClasses="bg-yellow text-green px-5 sm:px-6 md:px-8 lg:px-10 border-yellow mt-5"
       >
         {
@@ -61,6 +64,11 @@ export default function Lottery({ id, title, description, date, image, price, nu
               `Comprar ${selectedNumbers.length} boletos`
         }
       </Button>
+
+      <BuyForm 
+        isFormOpen={isFormOpen}
+        setIsFormOpen={setIsFormOpen}
+      />
     </section >
   )
 }

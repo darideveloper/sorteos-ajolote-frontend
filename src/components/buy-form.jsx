@@ -1,3 +1,5 @@
+import PropTypes from "prop-types"
+
 // Hooks
 import { useState } from "react"
 
@@ -5,7 +7,7 @@ import { useState } from "react"
 import Input from "./input"
 import Button from "./button"
 
-export default function BuyForm() {
+export default function BuyForm({isFormOpen, setIsFormOpen}) {
 
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
@@ -13,7 +15,11 @@ export default function BuyForm() {
   return (
     <form
       onSubmit={() => { }}
-      className="fixed top-0 left-0 z-20 w-full h-full bg-black bg-opacity-50 flex items-center justify-center"
+      className="fixed top-0 left-0 z-20 w-full h-full bg-black bg-opacity-50 flex items-center justify-center opacity-0 duration-200"
+      style={{
+        zIndex: isFormOpen ? "20" : "-10",
+        opacity: isFormOpen ? 1 : 0,
+      }}
     >
       <div className="flex items-center justify-center flex-col shadow-xl bg-yellow-light text-green w-96 py-10 rounded-lg">
 
@@ -43,25 +49,18 @@ export default function BuyForm() {
           </Button>
           <Button
             disabled = {false}
-            onClick={() => {}}
+            onClick={() => {setIsFormOpen(false)}}
             customClasses="opacity-70 text-green bg-yellow border-yellow w-5/12"
           >
             Cancelar
           </Button>
         </div>
-        {/* <Button
-          colorClasses='text-green bg-yellow hover:text-yellow-light hover:bg-green'
-        >
-          Apartar
-        </Button>
-
-        <Button
-          colorClasses='text-green bg-yellow hover:text-yellow-light hover:bg-pink-light'
-        >
-          Cancelar
-        </Button> */}
       </div>
-
     </form>
   )
+}
+
+BuyForm.propTypes = {
+  isFormOpen: PropTypes.bool.isRequired,
+  setIsFormOpen: PropTypes.func.isRequired,
 }

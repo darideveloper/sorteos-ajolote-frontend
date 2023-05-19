@@ -20,8 +20,6 @@ export default function LotteryNum({ number, selectedNumbers, setSelectedNumbers
           setIsActive(true)
           setSelectedNumbers([...selectedNumbers, number])
         }
-
-        console.log ({selectedNumbers, isActive})
       }}
     >
       {number}

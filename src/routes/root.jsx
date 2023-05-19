@@ -20,7 +20,6 @@ export default function Root() {
     const id = window.location.hash
     if (id) {
       setTimeout(() => {
-        console.log (id)
         const section = document.querySelector(id)
         section.scrollIntoView()
       }, 1000)
