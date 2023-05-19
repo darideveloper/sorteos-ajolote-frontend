@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 
 // Api
-import { getLoterry } from '../api/lottery'
+import { getLoterries } from '../api/lottery'
 
 // Components
 import Lottery from '../components/lottery'
@@ -18,7 +18,7 @@ export default function Buy() {
   // Load data when loads
   useEffect(() => {
 
-    getLoterry().then(data => {
+    getLoterries().then(data => {
       setData(data)
       setDataLoaded(true)
     })
