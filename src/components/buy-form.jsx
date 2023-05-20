@@ -1,4 +1,4 @@
-import PropTypes from "prop-types"
+import PropTypes, { number } from "prop-types"
 
 // Hooks
 import { useState, useEffect } from "react"
@@ -13,14 +13,11 @@ import { buyTickets } from "../api/lottery"
 
 export default function BuyForm({ setIsFormOpen, selectedNumbers, lotteryTitle, setIsSuccess, name, setName, priceTicket }) {
 
-  const [email, setEmail] = useState("")
+  const [phone, setPhone] = useState("")
   const [message, setMessage] = useState({})
-  const [emailIsInvalid, setEmailIsInvalid] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [notAvailableNumbers, setNotAvailableNumbers] = useState([])
   const [total, setTotal] = useState(0)
-
-  console.log({ priceTicket, total, selectedNumbers })
 
   // Update message and total when selected numbers change
   useEffect(() => {
@@ -34,10 +31,9 @@ export default function BuyForm({ setIsFormOpen, selectedNumbers, lotteryTitle, 
     setIsLoading(true)
 
     // Submit data to api
-    buyTickets(name, email, selectedNumbers, lotteryTitle).then(res => {
+    buyTickets(name, phone, selectedNumbers, lotteryTitle).then(res => {
 
       const messages = {
-        "invalid email": "Correo inválido",
         "lottery is closed": "Este sorteo ya está cerrado. Intenta con otro mas tarde.",
         "numbers not available": "Algunos de los números que elegiste ya no están disponibles. Actualiza la página e intenta de nuevo. Numeros no disponibles: ",
       }
@@ -60,12 +56,6 @@ export default function BuyForm({ setIsFormOpen, selectedNumbers, lotteryTitle, 
             type: "error"
           })
 
-          if (res.message == "invalid email") {
-            setEmailIsInvalid(true)
-          } else {
-            setEmailIsInvalid(false)
-          }
-
           if (res.message == "numbers not available") {
             setNotAvailableNumbers(res.data.numbers)
           } else {
@@ -85,7 +75,6 @@ export default function BuyForm({ setIsFormOpen, selectedNumbers, lotteryTitle, 
   function cancel() {
     setIsFormOpen(false)
     setMessage({ text: selectedNumbers.join(" - "), type: "message" })
-    setEmailIsInvalid(false)
     setNotAvailableNumbers([])
   }
 
@@ -137,18 +126,17 @@ export default function BuyForm({ setIsFormOpen, selectedNumbers, lotteryTitle, 
             />
 
             <Input
-              label="Correo"
-              inputType="email"
-              id="email"
-              placeholder="juanperez@gmail.com"
-              value={email}
-              onChange={(e) => { setEmail(e.target.value) }}
-              isInvalid={emailIsInvalid}
+              label="Teléfono"
+              inputType="tel"
+              id="tel"
+              placeholder="449 123 4567"
+              value={phone}
+              onChange={(e) => { setPhone(e.target.value) }}
             />
 
             <div className="buttons w-5/6 mt-5 flex items-center justify-between">
               <Button
-                disabled={name === "" || email === "" ? true : false}
+                disabled={name === "" || phone === "" ? true : false}
                 onClick={(e) => { submit() }}
                 customClasses="text-yellow-light bg-green border-green w-6/12"
               >

@@ -26,7 +26,7 @@ export default function Success ({setIsSuccess, name}) {
         </p>
       ))}
 
-      <p className='text-xs mt-1'>Cuentas con un máximo de 8 hrs para realizar tu pago</p>
+      <p className='text-xs mt-1'>Cuentas con un máximo de 12 hrs para realizar tu pago</p>
 
       <Button 
         onClick={() => {

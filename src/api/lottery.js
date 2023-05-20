@@ -11,13 +11,13 @@ export async function getLoterries() {
   return data
 }
 
-export async function buyTickets(user_name, user_email, tickets, lottery) {
+export async function buyTickets(user_name, user_phone, tickets, lottery) {
 
   const response = await fetch(`${endpoint}/save-tickets/`, {
     method: 'POST',
     body: JSON.stringify({
       user_name,
-      user_email,
+      user_phone,
       tickets,
       lottery,
     }),
