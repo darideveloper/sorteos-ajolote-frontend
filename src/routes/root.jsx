@@ -85,7 +85,7 @@ export default function Root() {
       </main>
       <footer>
         <small className="text-md text-center block">
-          ©copy 2023 Sorteos Ajolote, powered by <a href="https://www.darideveloper.com" target="_blank">Dari Developer</a>
+          © 2023 Sorteos Ajolote, powered by <a href="https://www.darideveloper.com" target="_blank">Dari Developer</a>
         </small>
       </footer>
     </>
