@@ -30,102 +30,70 @@ export default function Home() {
           text="Preguntas frecuentes"
         />
 
-        <div className="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-5 mx-0 sm:mx-auto mt-10 gap-10">
+        <div className="w-5/6 max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 px-5 mt-10 gap-10">
+
           <Faq
-            question="¿Pregunta 1?"
+            question="¿Cómo se realizará el sorteo?"
             icon={
-              <path d="m11.998 2.005c5.517 0 9.997 4.48 9.997 9.997 0 5.518-4.48 9.998-9.997 9.998-5.518 0-9.998-4.48-9.998-9.998 0-5.517 4.48-9.997 9.998-9.997zm0 1.5c-4.69 0-8.498 3.807-8.498 8.497s3.808 8.498 8.498 8.498 8.497-3.808 8.497-8.498-3.807-8.497-8.497-8.497zm-5.049 8.886 3.851 3.43c.142.128.321.19.499.19.202 0 .405-.081.552-.242l5.953-6.509c.131-.143.196-.323.196-.502 0-.41-.331-.747-.748-.747-.204 0-.405.082-.554.243l-5.453 5.962-3.298-2.938c-.144-.127-.321-.19-.499-.19-.415 0-.748.335-.748.746 0 .205.084.409.249.557z" />
+              <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 18.25c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25c.691 0 1.25.56 1.25 1.25s-.559 1.25-1.25 1.25zm1.961-5.928c-.904.975-.947 1.514-.935 2.178h-2.005c-.007-1.475.02-2.125 1.431-3.468.573-.544 1.025-.975.962-1.821-.058-.805-.73-1.226-1.365-1.226-.709 0-1.538.527-1.538 2.013h-2.01c0-2.4 1.409-3.95 3.59-3.95 1.036 0 1.942.339 2.55.955.57.578.865 1.372.854 2.298-.016 1.383-.857 2.291-1.534 3.021z"/>
             }
           >
             <>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur tempora unde ipsum perferendis quasi nihil non exercitationem fugit quaerat? Quidem!
+                Todos nuestros sorteos se realizan en base a la Lotería Nacional para la Asistencia Pública mexicana.
               </p>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam explicabo ab laboriosam architecto doloremque error!
+                El ganador del sorteo será el participante cuyo número de boleto coincida con las últimas cifras del primer premio ganador de la Lotería Nacional (las fechas serán publicadas en nuestra página oficial).
               </p>
             </>
           </Faq>
 
           <Faq
-            question="¿Pregunta 1?"
+            question="¿Cómo compro mis boletos?"
             icon={
-              <path d="m11.998 2.005c5.517 0 9.997 4.48 9.997 9.997 0 5.518-4.48 9.998-9.997 9.998-5.518 0-9.998-4.48-9.998-9.998 0-5.517 4.48-9.997 9.998-9.997zm0 1.5c-4.69 0-8.498 3.807-8.498 8.497s3.808 8.498 8.498 8.498 8.497-3.808 8.497-8.498-3.807-8.497-8.497-8.497zm-5.049 8.886 3.851 3.43c.142.128.321.19.499.19.202 0 .405-.081.552-.242l5.953-6.509c.131-.143.196-.323.196-.502 0-.41-.331-.747-.748-.747-.204 0-.405.082-.554.243l-5.453 5.962-3.298-2.938c-.144-.127-.321-.19-.499-.19-.415 0-.748.335-.748.746 0 .205.084.409.249.557z" />
+              <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 16.947v1.053h-1v-.998c-1.035-.018-2.106-.265-3-.727l.455-1.644c.956.371 2.229.765 3.225.54 1.149-.26 1.384-1.442.114-2.011-.931-.434-3.778-.805-3.778-3.243 0-1.363 1.039-2.583 2.984-2.85v-1.067h1v1.018c.724.019 1.536.145 2.442.42l-.362 1.647c-.768-.27-1.617-.515-2.443-.465-1.489.087-1.62 1.376-.581 1.916 1.712.805 3.944 1.402 3.944 3.547.002 1.718-1.343 2.632-3 2.864z"/>
             }
           >
             <>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur tempora unde ipsum perferendis quasi nihil non exercitationem fugit quaerat? Quidem!
+                Primero deberás apartar tus boletos en nuestra página. Una vez elegidos los boletos, te saldrán nuestros datos bancarios, así como nuestro WhatsApp, donde tendrás que enviar tu comprobante de pago.
               </p>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam explicabo ab laboriosam architecto doloremque error!
+                Al instante, te mandaremos un mensaje con la imagen de tus boletos, donde te notificaremos que tus boletos ya han sido activados.
               </p>
             </>
           </Faq>
 
           <Faq
-            question="¿Pregunta 1?"
+            question="¿Cuánto tiempo tengo para pagar mis boletos?"
             icon={
-              <path d="m11.998 2.005c5.517 0 9.997 4.48 9.997 9.997 0 5.518-4.48 9.998-9.997 9.998-5.518 0-9.998-4.48-9.998-9.998 0-5.517 4.48-9.997 9.998-9.997zm0 1.5c-4.69 0-8.498 3.807-8.498 8.497s3.808 8.498 8.498 8.498 8.497-3.808 8.497-8.498-3.807-8.497-8.497-8.497zm-5.049 8.886 3.851 3.43c.142.128.321.19.499.19.202 0 .405-.081.552-.242l5.953-6.509c.131-.143.196-.323.196-.502 0-.41-.331-.747-.748-.747-.204 0-.405.082-.554.243l-5.453 5.962-3.298-2.938c-.144-.127-.321-.19-.499-.19-.415 0-.748.335-.748.746 0 .205.084.409.249.557z" />
+              <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm7 14h-8v-9h2v7h6v2z"/>
             }
           >
             <>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur tempora unde ipsum perferendis quasi nihil non exercitationem fugit quaerat? Quidem!
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam explicabo ab laboriosam architecto doloremque error!
+                Después de 12 horas de apartar tu boleto sin haberlo pagado, automáticamente será cancelado y puesto nuevamente a la venta.
               </p>
             </>
           </Faq>
 
           <Faq
-            question="¿Pregunta 1?"
+            question="¿Existe alguna garantía?"
             icon={
-              <path d="m11.998 2.005c5.517 0 9.997 4.48 9.997 9.997 0 5.518-4.48 9.998-9.997 9.998-5.518 0-9.998-4.48-9.998-9.998 0-5.517 4.48-9.997 9.998-9.997zm0 1.5c-4.69 0-8.498 3.807-8.498 8.497s3.808 8.498 8.498 8.498 8.497-3.808 8.497-8.498-3.807-8.497-8.497-8.497zm-5.049 8.886 3.851 3.43c.142.128.321.19.499.19.202 0 .405-.081.552-.242l5.953-6.509c.131-.143.196-.323.196-.502 0-.41-.331-.747-.748-.747-.204 0-.405.082-.554.243l-5.453 5.962-3.298-2.938c-.144-.127-.321-.19-.499-.19-.415 0-.748.335-.748.746 0 .205.084.409.249.557z" />
+              <path d="M14 9v2h-4v-2c0-1.104.897-2 2-2s2 .896 2 2zm10 3c0 6.627-5.373 12-12 12s-12-5.373-12-12 5.373-12 12-12 12 5.373 12 12zm-8-1h-1v-2c0-1.656-1.343-3-3-3s-3 1.344-3 3v2h-1v6h8v-6z"/>
             }
           >
             <>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur tempora unde ipsum perferendis quasi nihil non exercitationem fugit quaerat? Quidem!
+                Por supuesto que sí, queremos generar un ambiente muy confiable con nuestra comunidad.
               </p>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam explicabo ab laboriosam architecto doloremque error!
+                Todo el sorteo será transmitido en vivo, los ganadores serán publicados en nuestras redes sociales y jamás perderemos ni un minuto de contacto contigo.
               </p>
             </>
           </Faq>
 
-          <Faq
-            question="¿Pregunta 1?"
-            icon={
-              <path d="m11.998 2.005c5.517 0 9.997 4.48 9.997 9.997 0 5.518-4.48 9.998-9.997 9.998-5.518 0-9.998-4.48-9.998-9.998 0-5.517 4.48-9.997 9.998-9.997zm0 1.5c-4.69 0-8.498 3.807-8.498 8.497s3.808 8.498 8.498 8.498 8.497-3.808 8.497-8.498-3.807-8.497-8.497-8.497zm-5.049 8.886 3.851 3.43c.142.128.321.19.499.19.202 0 .405-.081.552-.242l5.953-6.509c.131-.143.196-.323.196-.502 0-.41-.331-.747-.748-.747-.204 0-.405.082-.554.243l-5.453 5.962-3.298-2.938c-.144-.127-.321-.19-.499-.19-.415 0-.748.335-.748.746 0 .205.084.409.249.557z" />
-            }
-          >
-            <>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur tempora unde ipsum perferendis quasi nihil non exercitationem fugit quaerat? Quidem!
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam explicabo ab laboriosam architecto doloremque error!
-              </p>
-            </>
-          </Faq>
 
-          <Faq
-            question="¿Pregunta 1?"
-            icon={
-              <path d="m11.998 2.005c5.517 0 9.997 4.48 9.997 9.997 0 5.518-4.48 9.998-9.997 9.998-5.518 0-9.998-4.48-9.998-9.998 0-5.517 4.48-9.997 9.998-9.997zm0 1.5c-4.69 0-8.498 3.807-8.498 8.497s3.808 8.498 8.498 8.498 8.497-3.808 8.497-8.498-3.807-8.497-8.497-8.497zm-5.049 8.886 3.851 3.43c.142.128.321.19.499.19.202 0 .405-.081.552-.242l5.953-6.509c.131-.143.196-.323.196-.502 0-.41-.331-.747-.748-.747-.204 0-.405.082-.554.243l-5.453 5.962-3.298-2.938c-.144-.127-.321-.19-.499-.19-.415 0-.748.335-.748.746 0 .205.084.409.249.557z" />
-            }
-          >
-            <>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur tempora unde ipsum perferendis quasi nihil non exercitationem fugit quaerat? Quidem!
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam explicabo ab laboriosam architecto doloremque error!
-              </p>
-            </>
-          </Faq>
         </div>
       </section>
 
@@ -140,10 +108,12 @@ export default function Home() {
           maxHeight={500}
         >
 
-          <div className="container text-xl mx-auto px-5 text-center">
-            <p>Somos la manera más segura y divertida de participar en sorteos/rifas en México, todos nuestros sorteos se realizan en base a la Lotería Nacional para la Asistencia Pública mexicana.</p>
-
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis et iusto officiis! Adipisci fuga cupiditate praesentium quaerat optio eligendi iure id magni deleniti, commodi ipsum aspernatur nihil ad delectus recusandae!</p>
+          <div className="container text-xl mx-auto px-5 text-center max-w-5xl">
+            <p>
+              Somos una comunidad de amigos originarios de la ciudad de Aguascalientes.
+              <br />
+              Nos dedicamos a hacer sorteos de nuestra comunidad para todo México y buscamos crear un ambiente confiable y divertido para las personas interesadas en participar sorteos.
+            </p>
           </div>
         </Paralax>
       </section>
