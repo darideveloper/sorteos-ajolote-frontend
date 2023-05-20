@@ -3,13 +3,23 @@ import PropTypes from 'prop-types'
 // Componentns
 import Button from './button'
 
-export default function Success ({setIsSuccess, name}) {
+export default function Success ({setIsSuccess, name, total}) {
 
   const payData = [
-    {name: "Banco", value: "BBVA"},
-    {name: "Número", value: "4152 3140 8482 8287"},
-    {name: "Titular", value: "David Faz"},
-    {name: "Concepto de pago", value: name},
+    {name: "Banco:", value: "BBVA"},
+    {name: "Número:", value: "4152 3140 8482 8287"},
+    {name: "Titular:", value: "David Faz"},
+    {name: "Concepto de pago:", value: name},
+    {name: "Cantidad:", value: total + " MXN"},
+    {name: "Mandar tu comprobante de pago a:", value: (
+      <a 
+        href={`https://api.whatsapp.com/send?phone=5214491448460&text=Este%20es%20mi%20comprobante%20de%20pago%2C%20soy%20${name}"`}
+        className='underline hover:opacity-80'
+        target='_blank'
+      >
+        449 144 8460
+      </a>
+    ) }
   ]
 
   return (
@@ -20,7 +30,7 @@ export default function Success ({setIsSuccess, name}) {
       {payData.map((item, index) => (
         <p key={index}>
           {item.name}
-          <span className='font-bold ml-1'>
+          <span className='font-bold ml-2'>
             {item.value}
           </span>
         </p>
@@ -35,7 +45,7 @@ export default function Success ({setIsSuccess, name}) {
         }}
         customClasses='bg-yellow text-green px-5 mt-5'
       >
-        Continuar
+        Cerrar
       </Button>
     </>
   )
@@ -44,4 +54,5 @@ export default function Success ({setIsSuccess, name}) {
 Success.propTypes = {
   setIsSuccess: PropTypes.func.isRequired,
   name: PropTypes.string.isRequired,
+  total: PropTypes.number.isRequired
 }

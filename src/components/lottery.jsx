@@ -79,6 +79,7 @@ export default function Lottery({ id, title, description, date, image, price, nu
           <Success 
             setIsSuccess={setIsSuccess}
             name={name}
+            total={selectedNumbers.length * price}
           />
         </Modal>
         :
