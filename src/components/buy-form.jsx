@@ -39,7 +39,7 @@ export default function BuyForm({ setIsFormOpen, selectedNumbers, lotteryTitle, 
       const messages = {
         "invalid email": "Correo inválido",
         "lottery is closed": "Este sorteo ya está cerrado. Intenta con otro mas tarde.",
-        "numbers not available": "Alguno de los números que elegiste ya no está disponible. Actualiza la página e intenta con otros. Numeros no disponibles: ",
+        "numbers not available": "Algunos de los números que elegiste ya no están disponibles. Actualiza la página e intenta de nuevo. Numeros no disponibles: ",
       }
 
       // Hide loading spinner
