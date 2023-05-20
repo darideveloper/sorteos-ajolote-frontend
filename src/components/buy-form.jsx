@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 
 // Hooks
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 // Components
 import Input from "./input"
@@ -11,13 +11,22 @@ import Loading from "./loading"
 // Api
 import { buyTickets } from "../api/lottery"
 
-export default function BuyForm({ isFormOpen, setIsFormOpen, selectedNumbers, lotteryTitle, setIsSuccess, name, setName }) {
+export default function BuyForm({ setIsFormOpen, selectedNumbers, lotteryTitle, setIsSuccess, name, setName, priceTicket }) {
 
   const [email, setEmail] = useState("")
-  const [message, setMessage] = useState({ text: selectedNumbers.join(" - "), type: "message" })
+  const [message, setMessage] = useState({})
   const [emailIsInvalid, setEmailIsInvalid] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [notAvailableNumbers, setNotAvailableNumbers] = useState([])
+  const [total, setTotal] = useState(0)
+
+  console.log({ priceTicket, total, selectedNumbers })
+
+  // Update message and total when selected numbers change
+  useEffect(() => {
+    setMessage({ text: selectedNumbers.join(" - "), type: "message" })
+    setTotal(selectedNumbers.length * priceTicket)
+  }, [selectedNumbers])
 
   function submit(e) {
 
@@ -41,8 +50,8 @@ export default function BuyForm({ isFormOpen, setIsFormOpen, selectedNumbers, lo
         cancel()
 
         // Move tu success state
-        setIsSuccess (true)
-        
+        setIsSuccess(true)
+
       } else {
         // Render error
         if (Object.keys(messages).includes(res.message)) {
@@ -92,6 +101,16 @@ export default function BuyForm({ isFormOpen, setIsFormOpen, selectedNumbers, lo
           :
           <>
             <h2 className="text-2xl mb-2">Aparta tus boletos</h2>
+            {
+              total > 0
+              &&
+              <p className="total text-lg text-green w-5/6 flex flex-wrap justify-center">
+                Total:
+                <span className="font-bold ml-2">
+                  {total} MXN
+                </span>
+              </p>
+            }
             <p className={`message ${message.type == 'error' ? 'text-red-500' : 'text-green'} w-5/6`}>{message.text}</p>
             {
               notAvailableNumbers.length > 0
@@ -106,6 +125,7 @@ export default function BuyForm({ isFormOpen, setIsFormOpen, selectedNumbers, lo
                 }
               </p>
             }
+
 
             <Input
               label="Nombre"
@@ -149,11 +169,11 @@ export default function BuyForm({ isFormOpen, setIsFormOpen, selectedNumbers, lo
 }
 
 BuyForm.propTypes = {
-  isFormOpen: PropTypes.bool.isRequired,
   setIsFormOpen: PropTypes.func.isRequired,
   selectedNumbers: PropTypes.array.isRequired,
   lotteryTitle: PropTypes.string.isRequired,
   setIsSuccess: PropTypes.func.isRequired,
   name: PropTypes.string.isRequired,
   setName: PropTypes.func.isRequired,
+  priceTicket: PropTypes.number.isRequired,
 }

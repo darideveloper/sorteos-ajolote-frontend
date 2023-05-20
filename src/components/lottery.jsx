@@ -93,6 +93,7 @@ export default function Lottery({ id, title, description, date, image, price, nu
             setIsSuccess={setIsSuccess}
             name={name}
             setName={setName}
+            priceTicket={price}
           />
         </Modal>
       }
