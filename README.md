@@ -58,35 +58,35 @@ Project type: **client's project**
 
 # Details
 
-The page have a Landing page with the details about the project, and a Buy page where the clients can see and select their numbers of the lottery. \r
-\r
-The admin of the web page, can manage the lotteries and the selected tickets with the related django project.\r
-\r
-## Pages and sections\r
-\r
-* Landing\r
-\t* Faqs\r
-\t* About us\r
-\t* Contact \r
-* Buy\r
-\t* Lotteries
+The page have a Landing page with the details about the project, and a Buy page where the clients can see and select their numbers of the lottery. 
+
+The admin of the web page, can manage the lotteries and the selected tickets with the related django project.
+
+## Pages and sections
+
+* Landing
+	* Faqs
+	* About us
+	* Contact 
+* Buy
+	* Lotteries
 
 # Roadmap
 
-* [x] Tailwind custom colors\r
-* [x] Landing layout and responsive\r
-* [x] Routing\r
-* [x] Paralax effect in landing\r
-* [x] Index metadata\r
-* [x] Hover effects\r
-* [x] Buy page\r
-\t* [x] Layout and responsive\r
-\t* [x] Get data from backend\r
-\t* [x] Render no-data page\r
-\t* [x] Render lotteries\r
-\t* [x] Buy form who request user data\r
-\t* [x] Submit selected numbers to backend\r
-\t* [x] Validate response form backend and show errors\r
-\t* [x] Success page
+* [x] Tailwind custom colors
+* [x] Landing layout and responsive
+* [x] Routing
+* [x] Paralax effect in landing
+* [x] Index metadata
+* [x] Hover effects
+* [x] Buy page
+	* [x] Layout and responsive
+	* [x] Get data from backend
+	* [x] Render no-data page
+	* [x] Render lotteries
+	* [x] Buy form who request user data
+	* [x] Submit selected numbers to backend
+	* [x] Validate response form backend and show errors
+	* [x] Success page
 
 
