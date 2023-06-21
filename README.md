@@ -1,5 +1,5 @@
-<div><a href='https://github.com/github.com/darideveloper/blob/master/LICENSE' target='_blank'>
-            <img src='https://img.shields.io/github/license/github.com/darideveloper.svg?style=for-the-badge' alt='MIT License' height='30px'/>
+<div><a href='https://github.com/darideveloper/sorteos-ajolote-frontend/blob/master/LICENSE' target='_blank'>
+            <img src='https://img.shields.io/github/license/darideveloper/sorteos-ajolote-frontend.svg?style=for-the-badge' alt='MIT License' height='30px'/>
         </a><a href='https://www.linkedin.com/in/francisco-dari-hernandez-6456b6181/' target='_blank'>
                 <img src='https://img.shields.io/static/v1?style=for-the-badge&message=LinkedIn&color=0A66C2&logo=LinkedIn&logoColor=FFFFFF&label=' alt='Linkedin' height='30px'/>
             </a><a href='https://t.me/darideveloper' target='_blank'>
@@ -20,11 +20,7 @@ Visit at: **[sorteos-ajolote.darideveloper.com](https://sorteos-ajolote.darideve
 
 Web page for select lottery tickets (without payments), connected to a Django Dasboard.
 
-Start date: **2023-05-16**
-
-Last update: **2023-05-17**
-
-Project type: **client's project**
+Project type: **client**
 
 </div><br><details>
             <summary>Table of Contents</summary>
@@ -88,5 +84,4 @@ The admin of the web page, can manage the lotteries and the selected tickets wit
 	* [x] Submit selected numbers to backend
 	* [x] Validate response form backend and show errors
 	* [x] Success page
-
 
